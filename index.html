@@ -39,7 +39,9 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
 
@@ -179,13 +181,16 @@
             </div>
         </div>
     </main>
+    <p id="preview"></p>
     <footer>
         <h5> &copy; <a href="https://makeyourpdf.online/">makeyourpdf.online.</a> All rights reserved.</h5>
         <p><a href="https://makeyourpdf.online/">Privacy Policy</a> | <a href="https://makeyourpdf.online/"> Terms of
                 Service</a></p>
     </footer>
     <script src="dragover.js"></script>
-    <script src="toPDF.js"></script>
+    <script src="toPDF2.js"></script>
+    <!-- <script src="toPDF.js"></script> -->
+    <!-- <script src="pptToPDF.js"></script> -->
 </body>
 
 </html>
