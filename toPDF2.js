@@ -83,8 +83,8 @@ document.getElementById("convertBtn").addEventListener("click", async () => {
 
                 const imgRatio = img.naturalWidth / img.naturalHeight;
 
-                let imgW = pageWidth;
-                let imgH = imgW / imgRatio;
+                let imgW = pageWidth;       // start with full page width
+                let imgH = imgW / imgRatio; // height based on aspect ratio
 
                 // If height exceeds page height, scale down
                 if (imgH > pageHeight) {
@@ -92,17 +92,21 @@ document.getElementById("convertBtn").addEventListener("click", async () => {
                     imgW = imgH * imgRatio;
                 }
 
-                // If yPos is uninitialized (first page), set to 0
+                // Initialize yPos if not already
                 if (typeof yPos === "undefined") yPos = 0;
 
-                // Add new page only if image doesn't fit current page
+                // Add a new page if current yPos + imgH > pageHeight
                 if (yPos + imgH > pageHeight) {
                     pdf.addPage();
-                    yPos = 0; // reset yPos at top of new page
+                    yPos = 0;
                 }
 
-                pdf.addImage(img, "JPEG", 0, yPos, imgW, imgH);
-                yPos += imgH;
+                // Center horizontally
+                const xPos = (pageWidth - imgW) / 2;
+
+                pdf.addImage(img, "JPEG", xPos, yPos, imgW, imgH);
+
+                yPos += imgH; // update yPos
             }
             // TEXT FILE
             else if (file.type === "text/plain") {
@@ -193,3 +197,4 @@ function loadImageFromFile(file) {
     });
 
 }
+
