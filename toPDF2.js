@@ -77,14 +77,32 @@ document.getElementById("convertBtn").addEventListener("click", async () => {
             // IMAGE FILE
             else if (file.type.startsWith("image/")) {
                 const img = await loadImageFromFile(file);
-                const maxWidth = pageSize.w - 2 * margin;
-                const imgRatio = img.naturalWidth / img.naturalHeight;
-                const imgW = maxWidth;
-                const imgH = imgW / imgRatio;
 
-                if (yPos + imgH + margin > pageHeight) { pdf.addPage(); yPos = margin; }
-                pdf.addImage(img, "JPEG", margin, yPos, imgW, imgH);
-                yPos += imgH + margin;
+                const pageWidth = pdf.internal.pageSize.getWidth();
+                const pageHeight = pdf.internal.pageSize.getHeight();
+
+                const imgRatio = img.naturalWidth / img.naturalHeight;
+
+                let imgW = pageWidth;
+                let imgH = imgW / imgRatio;
+
+                // If height exceeds page height, scale down
+                if (imgH > pageHeight) {
+                    imgH = pageHeight;
+                    imgW = imgH * imgRatio;
+                }
+
+                // If yPos is uninitialized (first page), set to 0
+                if (typeof yPos === "undefined") yPos = 0;
+
+                // Add new page only if image doesn't fit current page
+                if (yPos + imgH > pageHeight) {
+                    pdf.addPage();
+                    yPos = 0; // reset yPos at top of new page
+                }
+
+                pdf.addImage(img, "JPEG", 0, yPos, imgW, imgH);
+                yPos += imgH;
             }
             // TEXT FILE
             else if (file.type === "text/plain") {
@@ -173,4 +191,5 @@ function loadImageFromFile(file) {
         reader.onerror = () => reject(new Error("Failed to read file"));
         reader.readAsDataURL(file);
     });
+
 }
