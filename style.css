@@ -15,6 +15,17 @@
   background-color: oklch(0.558 0.288 302.321);
 }
 
+#convert-now {
+  text-decoration: none;
+  background-color: green;
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  border: 1px black solid;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
 .box1 {
   margin: 20px;
   padding: 30px;
@@ -131,15 +142,4 @@ footer {
   a {
     text-decoration: none;
   }
-}
-
-#convert-now {
-  text-decoration: none;
-  background-color: green;
-  display: inline-block;
-  padding: 10px;
-  color: white;
-  border: 1px black solid;
-  border-radius: 10px;
-  margin-right: 20px;
 }
