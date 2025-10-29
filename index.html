@@ -71,17 +71,48 @@
             <a id="convert-now" href="#uploadSection">Convert Now</a>
         </div>
     </nav>
-    <script type="text/javascript">
-                atOptions = {
-                    'key': '17afdd525d90c16cdc7fcfd51562dc64',
-                    'format': 'iframe',
-                    'height': 90,
-                    'width': 728,
-                    'params': {}
-                };
-            </script>
-            <script type="text/javascript"
-                src="//www.highperformanceformat.com/17afdd525d90c16cdc7fcfd51562dc64/invoke.js"></script>
+    <div class="ad-wrapper">
+        <script type="text/javascript">
+            atOptions = {
+                'key': '17afdd525d90c16cdc7fcfd51562dc64',
+                'format': 'iframe',
+                'height': 90,
+                'width': 728,
+                'params': {}
+            };
+        </script>
+        <script type="text/javascript"
+            src="//www.highperformanceformat.com/17afdd525d90c16cdc7fcfd51562dc64/invoke.js"></script>
+    </div>
+    <style>
+        /* Parent container: center and limit max width */
+        .ad-wrapper {
+            width: 100%;
+            max-width: 728px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Make the ad iframe responsive */
+        .ad-wrapper iframe {
+            width: 100% !important;
+            height: auto !important;
+            display: block;
+        }
+
+        /* Adjust height for smaller devices */
+        @media (max-width: 768px) {
+            .ad-wrapper iframe {
+                height: 60px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ad-wrapper iframe {
+                height: 50px !important;
+            }
+        }
+    </style>
     <main class="container mx-auto px-4 py-8 max-w-4xl">
         <div class="border box1">
             <div>
