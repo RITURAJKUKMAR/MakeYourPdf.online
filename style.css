@@ -19,6 +19,11 @@ body {
   border-radius: 10px;
   background: linear-gradient(90deg, rgb(38, 0, 255), rgb(0, 221, 255));
   box-shadow: 0 0 10px rgb(30, 0, 255);
+  transition: 0.5s all;
+  &:hover {
+    box-shadow: 0 0 50px rgb(30, 0, 255);
+    transform: scale(1.1);
+  }
 }
 
 .navbar {
@@ -43,6 +48,10 @@ body {
   box-shadow: 0 0 20px rgb(135, 255, 135);
   border-radius: 10px;
   margin-right: 20px;
+  transition: 0.5s all;
+  &:hover {
+    transform: rotate(360deg);
+  }
 }
 
 button {
@@ -54,6 +63,10 @@ button {
   padding: 30px;
   border-radius: 20px;
   border: 1px solid black;
+  transition: 0.5s all;
+  &:hover {
+    transform: rotate(10deg);
+  }
 
   .power {
     color: #155dfc;
@@ -79,6 +92,11 @@ button {
   padding: 30px;
   border-radius: 20px;
   border: 1px black solid;
+  transition: 0.5s all;
+  &:hover {
+    /* transform: translateY(-5px); */
+    transform: scale(1.07);
+  }
 
   h2 {
     align-content: center;
@@ -86,9 +104,11 @@ button {
       display: inline-block;
       background-color: #709cf9;
       color: #155dfc;
+      box-shadow: 0 0 10px #0051ff;
       width: 40px;
       height: 40px;
       border-radius: 50px;
+      border: 1px rgb(0, 149, 255) solid;
       font-size: 20px;
       align-content: center;
       text-align: center;
@@ -105,10 +125,16 @@ button {
     .up-arrow {
       display: inline-block;
       background-color: #9ebbf9;
+      border: 1px rgb(76, 196, 251) solid;
       width: 70px;
       height: 70px;
       border-radius: 50px;
       align-content: center;
+      transition: 0.5s all;
+      &:hover {
+        box-shadow: 0 0 50px #1b0fff;
+        transform: scale(1.1);
+      }
     }
 
     #inputFile {
@@ -125,6 +151,10 @@ button {
     padding: 5px;
     width: 100%;
     border-radius: 10px;
+    transition: 0.5s all;
+    &:hover {
+      transform: translateY(-5px);
+    }
   }
 }
 
@@ -134,6 +164,11 @@ button {
   border-radius: 20px;
   background-color: #9abbc0;
   border: 1px black solid;
+  transition: 0.5s all;
+  &:hover {
+    transform: translateY(-5px);
+  }
+
   .list {
     ul {
       width: 100%;
@@ -156,6 +191,12 @@ button {
 
   .card {
     margin: 7px;
+    box-shadow: 0 0 10px white;
+    transition: 0.5s all;
+    cursor: pointer;
+    &:hover {
+      transform: rotate(360deg);
+    }
   }
 }
 
@@ -171,4 +212,3 @@ footer {
     text-decoration: none;
   }
 }
-
