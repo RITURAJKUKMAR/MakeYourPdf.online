@@ -5,6 +5,11 @@
   font-family: "Times New Roman", Times, serif;
 }
 
+body {
+  background-color: #969b9b;
+  /* color: white; */
+}
+
 .logo {
   padding: 5px;
   width: 50px;
@@ -15,21 +20,39 @@
   background-color: oklch(0.558 0.288 302.321);
 }
 
+.navbar {
+  background: linear-gradient(90deg, rgb(145, 149, 149), rgb(62, 62, 62));
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0px;
+  border-bottom: 3px rgb(218, 217, 217) solid;
+  box-shadow: 0 0 10px rgb(222, 222, 222);
+}
+
 #convert-now {
   text-decoration: none;
-  background-color: green;
+  background-color: rgb(90, 255, 90);
   display: inline-block;
   padding: 10px;
-  color: white;
-  border: 1px black solid;
+  color: black;
+  font: bold;
+  font-weight: 900;
+  border: 2px black solid;
+  box-shadow: 0 0 20px rgb(135, 255, 135);
   border-radius: 10px;
   margin-right: 20px;
 }
 
+button {
+  background-color: #5a322a;
+}
 .box1 {
+  background-color: #9abbc0;
   margin: 20px;
   padding: 30px;
   border-radius: 20px;
+  border: 1px solid black;
 
   .power {
     color: #155dfc;
@@ -50,9 +73,11 @@
 }
 
 .box2 {
+  background-color: #9abbc0;
   margin: 20px;
   padding: 30px;
   border-radius: 20px;
+  border: 1px black solid;
 
   h2 {
     align-content: center;
@@ -71,7 +96,7 @@
   .input-box {
     width: 100%;
     text-align: center;
-    border: 1px dashed rgb(195, 193, 193);
+    border: 1px dashed black;
     border-radius: 10px;
     padding: 20px;
     cursor: pointer;
@@ -94,6 +119,7 @@
     outline: none;
     border: none;
     background-color: black;
+    background-color: #5a322a;
     color: white;
     padding: 5px;
     width: 100%;
@@ -105,7 +131,8 @@
   margin: 20px;
   padding: 30px;
   border-radius: 20px;
-  background-color: rgb(255, 255, 255);
+  background-color: #9abbc0;
+  border: 1px black solid;
   .list {
     ul {
       width: 100%;

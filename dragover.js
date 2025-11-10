@@ -10,13 +10,13 @@ dropArea.addEventListener('dragover', (e) => {
 dropArea.addEventListener('dragleave', (e) => {
     e.preventDefault();
     e.stopPropagation();
-    dropArea.style.borderColor = '#ccc';
+    dropArea.style.borderColor = 'black';
 });
 
 dropArea.addEventListener('drop', (e) => {
     e.preventDefault();
     e.stopPropagation();
-    dropArea.style.borderColor = '#ccc';
+    dropArea.style.borderColor = 'black';
 
     let files = e.dataTransfer.files;
     let dataTransfer = new DataTransfer();
