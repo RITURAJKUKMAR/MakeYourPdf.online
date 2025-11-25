@@ -195,6 +195,4 @@ function loadImageFromFile(file) {
         reader.onerror = () => reject(new Error("Failed to read file"));
         reader.readAsDataURL(file);
     });
-
 }
-

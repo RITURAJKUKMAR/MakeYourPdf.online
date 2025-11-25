@@ -94,7 +94,6 @@ button {
   border: 1px black solid;
   transition: 0.5s all;
   &:hover {
-    /* transform: translateY(-5px); */
     transform: scale(1.07);
   }
 
@@ -212,4 +211,3 @@ footer {
     text-decoration: none;
   }
 }
-
